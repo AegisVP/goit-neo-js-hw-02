@@ -5,13 +5,28 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
+        <script src="./js/task-1.js"></script>
+        <script src="./js/task-2.js"></script>
+        <script src="./js/task-3.js"></script>
+        <script src="./js/task-4.js"></script>
     </head>
 
     <body>
-        <a href="task1.html">Task 1</a><br />
-        <a href="task2.html">Task 2</a><br />
-        <a href="task3.html">Task 3</a><br />
-        <a href="task4.html">Task 4</a>
+        <button type="button" onclick="testTask1()">Task 1</button>
+        <button type="button" onclick="testTask2()">Task 2</button>
+        <button type="button" onclick="testTask3()">Task 3</button>
+        <button type="button" onclick="testTask4()">Task 4</button>
+        <p id="result" style="display: block;width:800px;height:160px;border:1px solid black; background-color: black;color: rgb(4, 222, 4);padding:10px 2px;"></p>
     </body>
+
+    <script>
+        const logOutput = (func, ...attr) => {
+            const resEl = document.getElementById('result');
+
+            const res = func(...attr)
+            resEl.innerHTML = resEl.innerHTML + `#>  ${func.name}(${attr}) => ${res}<br />`;
+            console.log(res);
+        };
+    </script>
 
 </html>

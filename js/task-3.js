@@ -6,10 +6,14 @@ function checkForSpam(message) {
   return false;
 }
 
-console.log(checkForSpam('Latest technology news')); // false
-console.log(checkForSpam('JavaScript weekly newsletter')); // false
-console.log(checkForSpam('Get best sale offers now!')); // true
-console.log(checkForSpam('Amazing SalE, only tonight!')); // true
-console.log(checkForSpam('Trust me, this is not a spam message')); // true
-console.log(checkForSpam('Get rid of sPaM emails. Our book in on sale!')); // true
-console.log(checkForSpam('[SPAM] How to earn fast money?')); // true
+const testTask3 = () => {
+  document.getElementById('result').innerHTML = '';
+
+  logOutput(checkForSpam, 'Latest technology news'); // false
+  logOutput(checkForSpam, 'JavaScript weekly newsletter'); // false
+  logOutput(checkForSpam, 'Get best sale offers now!'); // true
+  logOutput(checkForSpam, 'Amazing SalE, only tonight!'); // true
+  logOutput(checkForSpam, 'Trust me, this is not a spam message'); // true
+  logOutput(checkForSpam, 'Get rid of sPaM emails. Our book in on sale!'); // true
+  logOutput(checkForSpam, '[SPAM] How to earn fast money?'); // true
+};
